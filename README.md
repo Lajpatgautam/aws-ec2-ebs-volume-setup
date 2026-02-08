@@ -1,5 +1,5 @@
-# Mounting and Making an EBS Volume Persistent
-First, understand this:
+## Mounting and Making an EBS Volume Persistent
+# First, understand this:
 EC2 = a virtual computer (server)
 
 EBS = a hard disk for that computer
@@ -60,7 +60,9 @@ Leave other options default
 ## 🔗 Step 2: Attach Volume to EC2 Instance
 
 Select the newly created EBS volume from the AWS EC2 console.
+
 Click **Actions → Attach volume**.
+
 Choose the target EC2 instance.
 
 Specify the device name as **/dev/sdf** during attachment.
@@ -135,16 +137,16 @@ press ":wq!" to write and exit
 # 🔄 Step 8: Reboot and Verify
 reboot
 
-After reboot, connect again and run:
-df -h
+# After reboot, connect again and run:
+- df -h
 You should see /test mounted. ✅
 
 # 🧹 Optional: Test Persistence
 You can unmount and remount to test:
 
-umount /test
-mount -a
-df -h
+-umount /test
+-mount -a
+-df -h
 
 
 
